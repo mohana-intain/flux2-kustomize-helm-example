@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: internal-app
+spec:
+  releaseName: internal-app
+  chart:
+    spec:
+      chart: internal-app
+      sourceRef:
+        kind: GitRepository
+        name: internal-app
+        namespace: flux-system
+      version: "0.1.0"
+  interval: 1m
+  install:
+    remediation:
+      retries: 3
+  values:
+    image:
+      dockerTag: "1.0.2"
