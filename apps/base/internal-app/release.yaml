@@ -1,15 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: internal-app
+  name: app-internal
 spec:
-  releaseName: internal-app
+  releaseName: app-internal
   chart:
     spec:
-      chart: internal-app
+      chart: app-internal
       sourceRef:
         kind: GitRepository
-        name: internal-app
+        name: app-internal
         namespace: flux-system
       version: "0.1.0"
   interval: 1m

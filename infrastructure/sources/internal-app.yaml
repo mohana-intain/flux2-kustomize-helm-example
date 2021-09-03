@@ -1,11 +1,11 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: internal-app
+  name: app-internal
   namespace: flux-system
 spec:
   interval: 1m
-  url: https://github.com/SoundaryaA3098/helm-chart
+  url: https://github.com/mohana-intain/helm
   secretRef:
     name: https-credentials
   ref:

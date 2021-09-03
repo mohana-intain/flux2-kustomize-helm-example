@@ -5,4 +5,4 @@ resources:
   - bitnami.yaml
   - podinfo.yaml
   - jetstack.yaml
-  - internal-app.yaml
+  - app-internal.yaml
