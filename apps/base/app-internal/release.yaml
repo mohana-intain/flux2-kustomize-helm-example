@@ -18,4 +18,4 @@ spec:
       retries: 3
   values:
     image:
-      dockerTag: "0.1-rc1"
+      imageRegistry: "intainregistry/node-internal-app-umb-testing-cni:0.1-rc1"
