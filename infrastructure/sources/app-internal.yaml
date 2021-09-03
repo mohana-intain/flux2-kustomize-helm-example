@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: app-internal
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/mohana-intain/helm
+  secretRef:
+    name: https-credentials
+  ref:
+    branch: master
