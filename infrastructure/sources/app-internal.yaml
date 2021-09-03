@@ -9,4 +9,4 @@ spec:
   secretRef:
     name: https-credentials
   ref:
-    branch: master
+    branch: main
