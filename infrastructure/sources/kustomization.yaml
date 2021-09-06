@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: flux-system
 resources:
   - bitnami.yaml
-  - podinfo.yaml
+#  - podinfo.yaml
   - jetstack.yaml
   - app-internal.yaml
