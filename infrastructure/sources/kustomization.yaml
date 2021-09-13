@@ -6,3 +6,4 @@ resources:
 #  - podinfo.yaml
   - jetstack.yaml
   - app-internal.yaml
+  - app-external.yaml
