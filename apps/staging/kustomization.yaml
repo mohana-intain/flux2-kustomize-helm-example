@@ -6,3 +6,4 @@ resources:
   # - ../base/app-internal
   # - ../base/app-external
   - ../base/bdb
+  - ../base/ui

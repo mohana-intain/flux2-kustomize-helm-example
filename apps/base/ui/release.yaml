@@ -1,0 +1,21 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: ui
+spec:
+  releaseName: ui
+  chart:
+    spec:
+      chart: ui
+      sourceRef:
+        kind: GitRepository
+        name: ui
+        namespace: flux-system
+      version: "0.1.0"
+  interval: 1m
+  install:
+    remediation:
+      retries: 3
+  values:
+    image:
+      imageRegistry: "intainregistry/ui-production:1.0.0"

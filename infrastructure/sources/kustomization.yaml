@@ -8,3 +8,4 @@ resources:
   - app-internal.yaml
   - app-external.yaml
   - bdb.yaml
+  - ui.yaml
