@@ -5,5 +5,5 @@ resources:
   - bitnami.yaml
 #  - podinfo.yaml
   - jetstack.yaml
-  - app-internal.yaml
+  # - app-internal.yaml
   - app-external.yaml
