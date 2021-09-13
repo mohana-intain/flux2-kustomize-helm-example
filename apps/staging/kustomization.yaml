@@ -5,5 +5,5 @@ resources:
   # - ../base/podinfo
   # - ../base/app-internal
   # - ../base/app-external
-  - ../base/bdb
+  # - ../base/bdb
   - ../base/ui
