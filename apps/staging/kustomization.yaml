@@ -3,5 +3,5 @@ kind: Kustomization
 namespace: fabricclient
 resources:
   # - ../base/podinfo
-  - ../base/app-internal
+  # - ../base/app-internal
   - ../base/app-external
