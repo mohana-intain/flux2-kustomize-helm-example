@@ -12,7 +12,7 @@ spec:
         name: app-external
         namespace: flux-system
       version: "0.1.0"
-  interval: 1m
+  interval: 3m
   install:
     remediation:
       retries: 3
