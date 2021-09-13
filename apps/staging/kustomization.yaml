@@ -4,5 +4,5 @@ namespace: fabricclient
 resources:
   # - ../base/podinfo
   # - ../base/app-internal
-  - ../base/app-external
+  # - ../base/app-external
   - ../base/bdb
