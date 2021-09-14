@@ -3,7 +3,6 @@ kind: HelmRelease
 metadata:
   name: mongodb
 spec:
-  releaseName: mongodb
   chart:
     spec:
       chart: mongodb
@@ -17,7 +16,6 @@ spec:
     remediation:
       retries: 3
   values:
-    installCRDs: true
     auth:
       ## @param auth.enabled Enable authentication
       ## ref: https://docs.mongodb.com/manual/tutorial/enable-authentication/

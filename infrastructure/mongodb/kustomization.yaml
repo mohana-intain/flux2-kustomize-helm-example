@@ -4,4 +4,3 @@ namespace: mongodb
 resources:
   - namespace.yaml
   - release.yaml
-
