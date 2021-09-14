@@ -1,15 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: app-internal
+  name: external-app
 spec:
-  releaseName: app-internal
+  releaseName: external-app
   chart:
     spec:
-      chart: app-internal
+      chart: external-app
       sourceRef:
         kind: GitRepository
-        name: app-internal
+        name: external-app
         namespace: flux-system
       version: "0.1.0"
   interval: 1m
@@ -18,4 +18,4 @@ spec:
       retries: 3
   values:
     image:
-      imageRegistry: "intainregistry/node-internal-app-umb-testing-cni:0.1-rc1"
+      imageRegistry: "intainregistry/saluda-external-app-staging:1.0.30"
