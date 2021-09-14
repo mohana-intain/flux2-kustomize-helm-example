@@ -1,0 +1,34 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mongodb
+spec:
+  releaseName: mongodb
+  chart:
+    spec:
+      chart: mongodb
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      version: "10.26.0"
+  interval: 1m
+  install:
+    remediation:
+      retries: 3
+  values:
+    installCRDs: true
+    auth:
+      ## @param auth.enabled Enable authentication
+      ## ref: https://docs.mongodb.com/manual/tutorial/enable-authentication/
+      ##
+      enabled: true
+      ## @param auth.rootUser MongoDB&reg; root user
+      ##
+      rootUser: root
+      ## @param auth.rootPassword MongoDB&reg; root password
+      ## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#setting-the-root-password-on-first-run
+      ##
+      rootPassword: "mongodb"
+      username: "mongodb"
+      password: "mongodb"
